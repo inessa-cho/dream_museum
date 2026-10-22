@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#171411" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Dream Museum" />
+  <link rel="manifest" href="/site.webmanifest?v=3" />
+  <link rel="icon" href="/favicon.ico?v=3" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+  <title>Dream Museum</title>
+  <link rel="stylesheet" href="/static/style.css?v=2" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="tabs" aria-label="Museum sections">
+      <button class="tab active" data-tab="generate">Generate</button>
+      <button class="tab" data-tab="gallery">Museum</button>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section id="generate" class="panel active">
+      <div class="hero">
+        <p class="eyebrow">A temporary exhibition</p>
+        <h1>Dream Museum</h1>
+        <button id="generateButton" class="generate-button">Generate</button>
+        <p id="modelMessage" class="model-message" hidden>Preparing the museum…</p>
+      </div>
+      <div id="progressList" class="progress-list" aria-live="polite"></div>
+      <p id="errorMessage" class="error-message" hidden></p>
+    </section>
+
+    <section id="gallery" class="panel">
+      <div id="emptyGallery" class="empty-gallery">
+        <span class="empty-frame"></span>
+        <p>The exhibition has not opened yet.</p>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+  </main>
+  <script src="/static/app.js?v=2"></script>
+</body>
+</html>

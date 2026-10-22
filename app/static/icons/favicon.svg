@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dream Museum">
+  <rect width="512" height="512" fill="#efe8db"/>
+  <path d="M186 396 L352 396 L474 462 L308 462 Z" fill="#a89f8f" opacity="0.55"/>
+  <circle cx="106" cy="150" r="20" fill="#8a6a3b"/>
+  <path d="M164 396 V220 a92 92 0 0 1 184 0 V396 Z" fill="#2f2e2b"/>
+  <path d="M216 396 V232 a40 40 0 0 1 80 0 V396 Z" fill="#efe8db"/>
+  <rect x="112" y="392" width="288" height="14" rx="6" fill="#2f2e2b"/>
+</svg>

@@ -1,0 +1,21 @@
+name: dream_museum
+services:
+  dream-museum:
+    build: .
+    container_name: dream-museum
+    restart: unless-stopped
+    ports:
+      - "8012:8012"
+    environment:
+      MODEL_ID: ${MODEL_ID:-runwayml/stable-diffusion-v1-5}
+      IMAGE_COUNT: 10
+      INFERENCE_STEPS: ${INFERENCE_STEPS:-24}
+      GUIDANCE_SCALE: ${GUIDANCE_SCALE:-7.0}
+      WIDTH: 512
+      HEIGHT: 512
+      HF_HOME: /app/model-cache
+      HUGGINGFACE_HUB_CACHE: /app/model-cache/hub
+      TRANSFORMERS_CACHE: /app/model-cache/transformers
+    volumes:
+      - ./output:/app/output
+      - ./model-cache:/app/model-cache

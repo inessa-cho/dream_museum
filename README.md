@@ -1,6 +1,6 @@
 # Dream Museum
 
-CPU-only Stable Diffusion 1.5 app that creates a temporary exhibition of ten randomly composed metaphysical/surrealist paintings.
+A CPU-based Stable Diffusion web app that creates temporary exhibitions of ten surrealist paintings.
 
 ## UI
 
@@ -39,12 +39,12 @@ docker compose down
 The first run downloads the SD1.5 model into `model-cache/`. On a CPU-only 8–12 GB machine, each image may take a long time. The ten works are generated sequentially so memory usage stays reasonable. Progress is updated at every diffusion step for the currently active work.
 
 
-## Preservation implementation notes
+## Implementation notes
 
 The FastAPI app generates ten SD1.5 images sequentially on CPU and exposes progress and current-exhibition views. A new generation replaces previous exhibition images. Pinned requirements and Docker definitions are retained; no model download, image generation or new build was run.
 
-## Maintenance status
+## Models and assets
 
-Development and maintenance are discontinued. This is a preservation snapshot, not a new release or feature-development plan. Running services and scheduled jobs are not automatically shut down by this status.
+Model weights and generated gallery images are not included. The configured model is downloaded separately; its license and usage restrictions apply when running the generator. The current code disables the model safety checker. A fresh model download and generation run have not been verified.
 
-This repository is intended for Private preservation. Public release requires a separate review and approval. See PRESERVATION.md for excluded material and verification limits.
+See [PRESERVATION.md](PRESERVATION.md) for the maintenance record, excluded files and verification scope.
